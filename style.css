@@ -1,0 +1,208 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+}
+
+/* BACKGROUND */
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('paratechbg.jpg') no-repeat center center/cover;
+    z-index: -2;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 6, 23, 0.82);
+    z-index: -1;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+    height: 100%;
+    padding: 40px 80px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LEFT */
+.left {
+    flex: 1;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    /* 🔥 centers horizontally */
+    text-align: center;
+}
+
+.left h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ef4444, #facc15, #22c55e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    opacity: 0.8;
+}
+
+.left h2 {
+    font-size: 2rem;
+}
+
+.desc {
+    font-size: 14px;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* BUTTON */
+.download-btn {
+    margin-top: 15px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    width: fit-content;
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5);
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 12px;
+}
+
+/* RIGHT */
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PHONE MOCKUP */
+.phone {
+    width: 260px;
+    height: 520px;
+    border-radius: 30px;
+    background: #111;
+    padding: 12px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background: #0f172a;
+    overflow: hidden;
+}
+
+/* APP UI */
+.app-header {
+    background: #22c55e;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* MAP AREA */
+.map {
+    height: 50%;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    position: relative;
+}
+
+.pin {
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+
+.jeep {
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    font-size: 20px;
+    animation: moveJeep 4s infinite linear;
+}
+
+@keyframes moveJeep {
+    0% {
+        left: 10%;
+    }
+
+    50% {
+        left: 70%;
+    }
+
+    100% {
+        left: 10%;
+    }
+}
+
+/* CARD UI */
+.card-ui {
+    padding: 15px;
+}
+
+.pay-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #22c55e;
+    color: white;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.7;
+}
